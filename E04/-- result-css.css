@@ -1,0 +1,414 @@
+3,7c3,7
+<   }
+<   
+<   body {
+<     font-family: "Nunito Sans", sans-serif;
+<     background: #faf7f5;
+---
+> }
+> 
+> body {
+>     font-family: 'Nunito Sans', sans-serif;
+>     background: #FAF7F5;
+10,17c10,17
+<   }
+<   
+<   a:focus,
+<   button:focus {
+<     outline: 3px solid #4d6eff;
+<   }
+<   
+<   .btn {
+---
+> }
+> 
+> a:focus, button:focus {
+>     /* Pour les éléments qui ont le focus, on customise le focus pour qu'il soit dans le thème du site, c'est important de ne pas supprimer totalement l'outline car nous n'aurions plus d'indications de où on se trouve avec la navigation clavier */
+>     outline: 3px solid #4D6EFF;
+> }
+> 
+> .btn {
+20c20
+<     background: #b5b5b5;
+---
+>     background: #B5B5B5;
+23c23
+<     color: #1f2937;
+---
+>     color: #1F2937;
+25,31c25,32
+<   }
+<   
+<   .btn:hover {
+<     background: #c9c9c9;
+<   }
+<   
+<   .container {
+---
+> }
+> 
+> .btn:hover {
+>     background: #C9C9C9;
+> }
+> 
+> .container {
+>     display: grid;
+33a35,40
+>     /* On divise la conteneur en 3 column de tailles égales, si la largeur est de 1170px, 1fr sera égal à : (1170px / 3), ensuite padding et margin sur les enfants détermine la taille de 1fr */
+>     grid-template-columns: repeat(3, 1fr);
+>     grid-column-gap: 20px;
+>     grid-row-gap: 20px;
+>     /*  OU SHORTHAND : */
+>     /*  gap: 20px;*/
+35,37c42,46
+<   }
+<   
+<   .bento {
+---
+>     /*  OU */
+>     /*margin-inline: auto;*/
+> }
+> 
+> .bento {
+45,53c54,57
+<   }
+<   
+<   .bento--nicole {
+<     background: linear-gradient(
+<         to bottom,
+<         rgba(82, 82, 82, 0.5),
+<         rgba(82, 82, 82, 0.5)
+<       ),
+<       url("../images/nicole.jpg") center/cover no-repeat;
+---
+> }
+> 
+> .bento--nicole {
+>     background: linear-gradient(to bottom, rgba(82, 82, 82, 0.5), rgba(82, 82, 82,0.5)), url('../images/nicole.jpg') center/cover no-repeat;
+55,57c59,75
+<   }
+<   
+<   .logo {
+---
+>     /*  Quelle place doit prendre ce menu ? ou le positionne-t-on ?*/
+>     /* ROWS */
+>     grid-row-start: 1;
+>     grid-row-end: 3;
+>     /*  OU SHORTHAND pour rows: démarre dans la première cellule et étales toi sur 2 lignes */
+>     grid-row: 1 / span 2;
+>     /* COLUMNS */
+>     /*grid-column-start: 1;*/
+>     /*grid-column-end: 2;*/
+>     /*  OU SHORTHAND pour column, ou rien pour columns, display grid se débrouille seul avec le contenu */
+>     /*grid-column: 1 ;*/
+>     /*  OU SHORTHAND pour column et rows*/
+>     /*grid-area: 1 / 1 / 4 / 2;*/
+>     justify-content: space-between;
+> }
+> 
+> .logo {
+62,64c80,82
+<   }
+<   
+<   .logo__img {
+---
+> }
+> 
+> .logo__img {
+67,69c85,87
+<   }
+<   
+<   .logo__title {
+---
+> }
+> 
+> .logo__title {
+76,79c94,97
+<   }
+<   
+<   .logo__title span {
+<     background: #4d6eff;
+---
+> }
+> 
+> .logo__title span {
+>     background: #4D6EFF;
+82,84c100,102
+<   }
+<   
+<   .menu {
+---
+> }
+> 
+> .menu {
+93,102c111,119
+<   }
+<   
+<   .menu li,
+<   .btn {
+<     transition: color 250ms ease-in, background 250ms ease-in,
+<       transform 250ms ease-in;
+<   }
+<   
+<   .menu li:hover {
+<     /* Si on veut que le menu soit plus grand au survol */
+---
+> }
+> 
+> .menu li,
+> .btn {
+>     transition: color 250ms ease-in, background 250ms ease-in, transform 250ms ease-in;
+> }
+> 
+> .menu li:hover {
+>     /* Si on veut que le menu soit plus grand au survol */ 
+104,107c121,127
+<   }
+<   
+<   .bento--title {
+<     background: #4d6eff;
+---
+> }
+> 
+> .bento--title {
+>     justify-content: center;
+>     /* Prend 2 column */
+>     grid-column: span 2;
+>     background: #4D6EFF;    
+113,115c133,135
+<   }
+<   
+<   .bento--title .bento__title {
+---
+> }
+> 
+> .bento--title .bento__title {
+118,121c138,141
+<   }
+<   
+<   .bento--title .bento__title::after {
+<     content: "";
+---
+> }
+> 
+> .bento--title .bento__title::after {
+>     content: '';
+127,129c147,149
+<   }
+<   
+<   .bento__header {
+---
+> }
+> 
+> .bento__header {
+135,137c155,157
+<   }
+<   
+<   .bento__header .bento__title {
+---
+> }
+> 
+> .bento__header .bento__title {
+139,141c159,161
+<   }
+<   
+<   .bento__metas {
+---
+> }
+> 
+> .bento__metas {
+146,148c166,168
+<   }
+<   
+<   .bento__meta--avatar {
+---
+> }
+> 
+> .bento__meta--avatar {
+151,153c171,173
+<   }
+<   
+<   .bento__meta--author {
+---
+> }
+> 
+> .bento__meta--author  {
+156,158c176,178
+<   }
+<   
+<   .bento__meta--date {
+---
+> }
+> 
+> .bento__meta--date  {
+161,163c181,183
+<   }
+<   
+<   .bento__footer {
+---
+> }
+> 
+> .bento__footer {
+167,179c187,199
+<   }
+<   
+<   .bento--work {
+<     border: 5px solid #ffbe00;
+<   }
+<   .bento--team {
+<     border: 5px solid #00a96e;
+<   }
+<   .bento--news {
+<     border: 5px solid #00b5ff;
+<   }
+<   
+<   .bento__tag {
+---
+> }
+> 
+> .bento--work {
+>     border: 5px solid #FFBE00;
+> }
+> .bento--team {
+>     border: 5px solid #00A96E;
+> }
+> .bento--news {
+>     border: 5px solid #00B5FF;
+> }
+> 
+> .bento__tag {
+191,217c211,284
+<   }
+<   
+<   .bento__tag--work {
+<     background-color: #ffbe00;
+<   }
+<   
+<   .bento__tag--team {
+<     background-color: #00a96e;
+<   }
+<   
+<   .bento__tag--news {
+<     background-color: #00b5ff;
+<   }
+<   
+<   .bento__tag--work:hover {
+<     background-color: #ffd700;
+<   }
+<   
+<   .bento__tag--team:hover {
+<     background-color: #00c78e;
+<   }
+<   
+<   .bento__tag--news:hover {
+<     background-color: #00cfff;
+<   }
+<   
+<   @media screen and (max-width: 320px) {
+---
+> }
+> 
+> .bento__tag--work {
+>     background-color: #FFBE00;
+> }
+> 
+> .bento__tag--team {
+>     background-color: #00A96E;
+> }
+> 
+> .bento__tag--news  {
+>     background-color: #00B5FF;
+> }
+> 
+> .bento__tag--work:hover {
+>     background-color: #FFD700;
+> }
+> 
+> .bento__tag--team:hover {
+>     background-color: #00C78E;
+> }
+> 
+> .bento__tag--news:hover  {
+>     background-color: #00CFFF;
+> }
+> 
+> @media screen and (max-width: 1170px) {
+>     /* On pourrait utiliser des :nth-child au lieu de devoir ajouter une classe dans le html, pour cibler directement le premier élément par exemple */
+>     .bento--1 {
+>         /* positionne le 1er article sur deux colonnes */
+>         grid-column: span 2;
+>     }
+> }
+> 
+> @media screen and (max-width: 940px) {
+>     .container {
+>         grid-template-columns: repeat(2, 1fr);
+>     }
+> 
+>     .bento--nicole {
+>         grid-column: 1 / -1;
+>     }
+> 
+>     .bento--title {
+>         grid-column: 1 / -1;
+>     }
+> 
+>     .bento--1 {
+>         grid-column: span 1;
+>     }
+> }
+> 
+> 
+> @media screen and (max-width: 560px) {
+>     .container {
+>         grid-template-columns: 1fr;
+>         padding: 1em;
+>         gap: 1em;
+>     }
+> 
+>     .bento {
+>         margin: 0;
+>     }
+> 
+>     .bento--nicole {
+>         grid-column: span 1;
+>     }
+> 
+>     .menu {
+>         font-size: 1em;
+>     }
+> }
+> 
+> @media screen and (max-width: 320px) {
+219c286
+<       margin: 0;
+---
+>         margin: 0;
+221c288
+<   
+---
+> 
+223,226c290,293
+<       margin-top: 4rem;
+<       padding: 0;
+<       margin-inline: auto;
+<       font-size: 0.8em;
+---
+>         margin-top: 4rem;
+>         padding: 0;
+>         margin-inline: auto;
+>         font-size: 0.8em;
+228c295
+<   
+---
+> 
+230c297
+<       padding: 0.5em;
+---
+>         padding: 0.5em;
+232,233c299
+<   }
+<   
+\ Pas de fin de ligne à la fin du fichier
+---
+> }
